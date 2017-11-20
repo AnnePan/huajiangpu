@@ -15,6 +15,11 @@
     <orderEntry type="jdk" jdkName="Python 3.4.0 virtualenv at ~/.virtualenvs/py3_django" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module" module-name="django_email_day07" />
+    <orderEntry type="module" module-name="day01" />
+    <orderEntry type="module" module-name="temp_test" />
+    <orderEntry type="module" module-name="tmp_test" />
+    <orderEntry type="module" module-name="pdffile" />
+    <orderEntry type="module" module-name="pdffile" />
   </component>
   <component name="TemplatesService">
     <option name="TEMPLATE_CONFIGURATION" value="Django" />

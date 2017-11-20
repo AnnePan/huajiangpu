@@ -6,7 +6,8 @@ from django.db import models
 class BaseModel(models.Model):
     create_time = models.DateTimeField(auto_now_add=True)
     update_time = models.DateTimeField(auto_now=True)
-    logic_delete = models.BooleanField(default=False)
+    is_delete = models.BooleanField(default=False)
 
-    class Meta():
+    class Meta:
         abstract = True
+

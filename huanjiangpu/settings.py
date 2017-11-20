@@ -23,7 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'xygn_j-23p0y6_)=sjuao^xxf%2fxx_=%vu&97%%%cd2o6im=y'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
@@ -83,7 +83,7 @@ DATABASES = {
         'NAME': 'hjp',
         'HOST': 'localhost',
         'PORT': '3306',
-        'USER': 'hjp',
+        'USER': 'root',
         'PASSWORD': '123456',
     }
 }
@@ -129,3 +129,6 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static'),
 ]
+
+MEDIA_ROOT = os.path.join(BASE_DIR, 'static')
+

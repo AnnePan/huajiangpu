@@ -2,8 +2,12 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/../../Flask/day01/.idea/day01.iml" filepath="$PROJECT_DIR$/../../Flask/day01/.idea/day01.iml" />
       <module fileurl="file://$PROJECT_DIR$/../../../我的坚果云/5django/课件/Django day07/课堂源码/django_email_day07/.idea/django_email_day07.iml" filepath="$PROJECT_DIR$/../../../我的坚果云/5django/课件/Django day07/课堂源码/django_email_day07/.idea/django_email_day07.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/huanjiangpu.iml" filepath="$PROJECT_DIR$/.idea/huanjiangpu.iml" />
+      <module fileurl="file://$USER_HOME$/Desktop/pdffile/.idea/pdffile.iml" filepath="$USER_HOME$/Desktop/pdffile/.idea/pdffile.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../Flask/day02/temp_test/.idea/temp_test.iml" filepath="$PROJECT_DIR$/../../Flask/day02/temp_test/.idea/temp_test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../Flask/day02/tmp_test/.idea/tmp_test.iml" filepath="$PROJECT_DIR$/../../Flask/day02/tmp_test/.idea/tmp_test.iml" />
     </modules>
   </component>
 </project>

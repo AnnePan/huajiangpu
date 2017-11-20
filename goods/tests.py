@@ -3,12 +3,29 @@ from .models import *
 
 # Create your tests here.
 
-# for name in ['鲜花','花束','花篮','婚车','手捧花','展台']:
-#     c = Category()
-#     c.cate_name = name
-#     c.cate_desc = name + '的描述'
-#     c.cate_image = 'images/test.jpg'
-#     c.save()
+# 公告测试数据
+# anno = Announcement()
+# anno.anno_title = '公告！小花匠下周二出差！'
+# anno.anno_detail = '小花匠下周二出差！小伙伴们周二来啦！小花匠下周一出差！小伙伴们周二来啦！小花匠下周一出差！小伙伴们周二来啦！小花匠下周一出差！小伙伴们周二来啦！'
+# anno.anno_image = 'images/ann_1.jpg'
+# anno.save()
+
+
+# 活动测试数据
+# acti = Activity()
+# acti.act_title = '11月你好！买生日花束送可爱小熊！'
+# acti.act_subtitle = '生日送花,你选对了吗?生日鲜花该如何送?这送花和送礼一样,也是有讲究,不能轻率随便了事。 下面就和小编一起来学习一下,这生日鲜花该如何送,才是最恰到好处的...'
+# acti.act_activiting = True
+# acti.act_detail = '11月1日-11月30日，买生日花束送可爱小熊！'
+# acti.act_image = 'images/act_1.jpg'
+# acti.save()
+
+# 类别测试数据
+for name in ['鲜花','花束','花篮','婚车','手捧花','展台']:
+    c = Category()
+    c.cate_name = name
+    c.cate_desc = name + '的描述'
+    c.save()
 
 # g = Goods()
 # g.g_name = '牵牛花'

@@ -10,66 +10,63 @@
 				<!-- Wrapper -->
 					<div id="wrapper">
 
-						<!-- Panel (Banner) -->
+						<!-- 公告 -->
 							<section class="panel banner right">
 								<div class="content color0 span-3-75">
-									<h1 class="major">{{ adv.adv_title }}<br />
-									{{ adv.adv_subtitle }}</h1>
-									<p>{{ adv.adv_detail }}</p>
+									<h2 class="major">{{ anno.anno_title }}</h2>
+									<p>{{ anno.anno_detail }}</p>
 									<ul class="actions">
+                                        {% if not request.COOKIES.userid %}
 										<li><a href="{% url 'users:login' %}" class="button">登录</a></li>
+                                        {% endif %}
 									</ul>
 								</div>
 								<div class="image filtered span-1-75" data-position="25% 25%">
-									<img src="{% static adv.adv_image1 %}" alt="{{ adv.adv_title }}" />
+									<img src="{% static anno.anno_image %}" alt="{{ anno.anno_title }}" />
 								</div>
 							</section>
 
-						<!-- Panel (Spotlight) -->
+						<!-- 活动 -->
 							<section class="panel spotlight medium right" id="first">
 								<div class="content span-7">
-									<h2 class="major">{{ adv.adv_title }}</h2>
-									<p>{{ adv.adv_detail }}</p>
+									<h2 class="major">{{ acti.act_title }}</h2>
+									<p>{{ acti.act_subtitle }}</p>
+									<p>{{ acti.act_detail }}</p>
 								</div>
 								<div class="image filtered tinted" data-position="top left">
-									<img src="{% static adv.adv_image2 %}" alt="{{ adv.adv_title }}" />
+									<img src="{% static acti.act_image %}" alt="{{ acti.act_title }}" />
 								</div>
 							</section>
 
-						<!-- Panel -->
-							<section class="panel color1">
-								<div class="intro joined">
-									<h2 class="major">生日花束</h2>
-									<p>生日送花,你选对了吗?生日鲜花该如何送?这送花和送礼一样,也是有讲究,不能轻率随便了事。 下面就和小编一起来学习一下,这生日鲜花该如何送,才是最恰到好处的...</p>
-								</div>
-								<div class="inner">
-									<ul class="grid-icons three connected">
-                                        {% for cate in cate_list %}
-{#<li style="background: url('/static/images/test.jpg') no-repeat top"><span class="icon fa-diamond">1234</span></li>#}
-                                            <li><a href="{% url 'goods:list' %}?id={{ cate.id }}"><span class="icon fa-diamond">{{ cate.cate_name }}</span></a></li>
-                                        {% endfor %}
-									</ul>
-								</div>
-							</section>
+                        <!-- 类别 -->
+                             <div id="accordion">
+                                <ul>
+                                    <li class="bar01">
+{#                                        <section class="panel spotlight medium right">#}
+                                        <span>非洲景色01</span>
+                                        <img src="{% static acti.act_image %}" alt="{{ cate.cate_name }}" />
+{#                                        </section>#}
+                                    </li>
+                                    <li class="bar02">
+                                        <span>非洲景色02</span>
+                                        <img src="{% static acti.act_image %}" alt="{{ cate.cate_name }}" />
+                                    </li>
+                                    <li class="bar03">
+                                        <span>非洲景色03</span>
+                                        <img src="{% static acti.act_image %}" alt="{{ cate.cate_name }}" />
+                                    </li>
+                                </ul>
+                            </div>
 
-						<!-- Panel -->
-							<section class="panel">
-								<div class="gallery">
-									<div class="group span-3">
-										<a href="{% url 'goods:detail' %}?id={{ hot_list.1.id }}" class="image filtered span-3" data-position="bottom"><img src="{% static hot_list.1.g_image %}" alt="{{ hot_list.1.g_name }}" /></a>
-										<a href="{% url 'goods:detail' %}?id={{ hot_list.2.id }}" class="image filtered span-1-5" data-position="center"><img src="{% static hot_list.2.g_image %}" alt="{{ hot_list.2.g_name }}" /></a>
-										<a href="{% url 'goods:detail' %}?id={{ hot_list.3.id }}" class="image filtered span-1-5" data-position="bottom"><img src="{% static hot_list.3.g_image %}" alt="{{ hot_list.3.g_name }}" /></a>
-									</div>
-									<a href="{% url 'goods:detail' %}?id={{ hot_list.4.id }}" class="image filtered span-2-5" data-position="top"><img src="{% static hot_list.4.g_image %}" alt="{{ hot_list.4.g_name }}" /></a>
-									<div class="group span-4-5">
-										<a href="{% url 'goods:detail' %}?id={{ hot_list.5.id }}" class="image filtered span-3" data-position="top"><img src="{% static hot_list.5.g_image %}" alt="{{ hot_list.5.g_name }}" /></a>
-										<a href="{% url 'goods:detail' %}?id={{ hot_list.6.id }}" class="image filtered span-1-5" data-position="center"><img src="{% static hot_list.6.g_image %}" alt="{{ hot_list.6.g_name }}" /></a>
-										<a href="{% url 'goods:detail' %}?id={{ hot_list.7.id }}" class="image filtered span-1-5" data-position="bottom"><img src="{% static hot_list.7.g_image %}" alt="{{ hot_list.7.g_name }}" /></a>
-										<a href="{% url 'goods:detail' %}?id={{ hot_list.8.id }}" class="image filtered span-3" data-position="top"><img src="{% static hot_list.8.g_image %}" alt="{{ hot_list.8.g_name }}" /></a>
-									</div>
-									<a href="{% url 'goods:detail' %}?id={{ hot_list.9.id }}" class="image filtered span-2-5" data-position="right"><img src="{% static hot_list.9.g_image %}" alt="{{ hot_list.9.g_name }}" /></a>
-								</div>
-							</section>
+{#							<section class="panel spotlight medium right">#}
+{#								<div class="content span-7">#}
+{#									<h2 class="major">{{ cate.cate_name }}</h2>#}
+{#								</div>#}
+{#								<div class="image filtered tinted" data-position="top left">#}
+{#									<img src="{% static acti.act_image %}" alt="{{ cate.cate_name }}" />#}
+{#								</div>#}
+{#							</section>#}
+
 
 						<!-- Panel -->
 							<section class="panel color4-alt">

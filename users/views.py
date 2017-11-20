@@ -25,7 +25,7 @@ def register_handle(request):
 
     if check_request_params(request):
         # 数据入库
-        User.objects.user_register(request)
+        # User.objects.user_register(request)
         return redirect(reverse('users:index'))
     else:
         return redirect(reverse('users:login'))
