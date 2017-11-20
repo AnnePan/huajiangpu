@@ -1,7 +1,7 @@
 {% extends 'common/base.html' %}
 
 {% load staticfiles %}
-
+{% load cate_filter %}
 
 {% block body %}
 		<!-- Page Wrapper -->
@@ -39,33 +39,17 @@
 							</section>
 
                         <!-- 类别 -->
-                             <div id="accordion">
-                                <ul>
-                                    <li class="bar01">
-{#                                        <section class="panel spotlight medium right">#}
-                                        <span>非洲景色01</span>
-                                        <img src="{% static acti.act_image %}" alt="{{ cate.cate_name }}" />
-{#                                        </section>#}
-                                    </li>
-                                    <li class="bar02">
-                                        <span>非洲景色02</span>
-                                        <img src="{% static acti.act_image %}" alt="{{ cate.cate_name }}" />
-                                    </li>
-                                    <li class="bar03">
-                                        <span>非洲景色03</span>
-                                        <img src="{% static acti.act_image %}" alt="{{ cate.cate_name }}" />
-                                    </li>
-                                </ul>
-                            </div>
 
-{#							<section class="panel spotlight medium right">#}
-{#								<div class="content span-7">#}
-{#									<h2 class="major">{{ cate.cate_name }}</h2>#}
-{#								</div>#}
-{#								<div class="image filtered tinted" data-position="top left">#}
-{#									<img src="{% static acti.act_image %}" alt="{{ cate.cate_name }}" />#}
-{#								</div>#}
-{#							</section>#}
+							<section class="medium category image" style="width: {{ cate_list.count | cate_width }}px">
+                                <ul>
+                                    {% for cata in cate_list %}
+                                    <li style="left: {{ forloop.counter | cate_left }}px">
+                                        <span>{{ cata.cate_name }}</span>
+                                        <img src="{% static acti.act_image %}"/>
+                                    </li>
+                                    {% endfor %}
+                                </ul>
+							</section>
 
 
 						<!-- Panel -->

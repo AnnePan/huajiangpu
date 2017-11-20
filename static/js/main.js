@@ -163,16 +163,6 @@
 				if (settings.keyboardShortcuts.enabled)
 					(function() {
 
-						$wrapper
-
-							// Prevent keystrokes inside excluded elements from bubbling.
-								.on('keypress keyup keydown', settings.excludeSelector, function(event) {
-
-									// Stop propagation.
-										event.stopPropagation();
-
-								});
-
 						$window
 
 							// Keypress event.
@@ -453,7 +443,8 @@
 								})
 
 							// Mousedown event.
-								.on('mousedown', function(event) {
+								.on('', function(event) {
+								// .on('mousedown', function(event) {
 
 									// Disable on <=small.
 										if (skel.breakpoint('small').active)
@@ -587,45 +578,7 @@
 							event.stopPropagation();
 
 					})
-					.on('click', 'a[href^="#"]', function(event) {
 
-						var	$this = $(this),
-							href = $this.attr('href'),
-							$target, x, y;
-
-						// Get target.
-							if (href == '#'
-							||	($target = $(href)).length == 0)
-								return;
-
-						// Prevent default.
-							event.preventDefault();
-							event.stopPropagation();
-
-						// Calculate x, y.
-							if (skel.breakpoint('small').active) {
-
-								x = $target.offset().top - (Math.max(0, $window.height() - $target.outerHeight()) / 2);
-								y = { scrollTop: x };
-
-							}
-							else {
-
-								x = $target.offset().left - (Math.max(0, $window.width() - $target.outerWidth()) / 2);
-								y = { scrollLeft: x };
-
-							}
-
-						// Scroll.
-							$bodyHtml
-								.stop()
-								.animate(
-									y,
-									settings.linkScrollSpeed,
-									'swing'
-								);
-
-					});
 
 			// Gallery.
 				$('.gallery')
