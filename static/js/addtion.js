@@ -14,7 +14,7 @@ $(function () {
             $(this).animate({ left: (($li_count*50)+600)-50*($li_count-$(this).index()) });
        });
 
-       event.preventDefault();
-       event.stopPropagation();
+       // event.preventDefault();
+       // event.stopPropagation();
    }); 
 });

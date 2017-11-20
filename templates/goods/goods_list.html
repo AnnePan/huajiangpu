@@ -16,11 +16,11 @@
 						<!-- Panel -->
 							<section class="panel">
 								<div class="intro color2">
-									<h2 class="major">手捧花</h2>
-									<p>手捧花只是一束小小的手捧花，却承载着新人的美满爱情和幸福未来。一款引人注目的手捧花不仅可以使新娘的造型更加完美，而且也是新娘经历幸福时刻的重要见证！</p>
+									<h2 class="major">{{ cate_obj.cate_name }}</h2>
+									<p>{{ cate_obj.cate_desc }}</p>
 								</div>
 								<div class="gallery">
-                                    {% for goods in cate_list %}
+                                    {% for goods in goods_list %}
 									<a href="{% url 'goods:detail' %}?id={{ goods.id }}" class="image filtered span-2-5" data-position="top"><img src="{% static goods.g_image %}" alt="{{ goods.g_name }}" /></a>
                                     {% endfor %}
                                 </div>

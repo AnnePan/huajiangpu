@@ -28,3 +28,7 @@ from utils.wrapper import *
 #     objects = UserManager()
 #
 
+class Contact(BaseModel):
+    c_uname = models.CharField(max_length=20)
+    c_tel = models.CharField(max_length=20)
+    c_message = models.CharField(max_length=20)
