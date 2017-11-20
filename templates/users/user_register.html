@@ -25,7 +25,8 @@
 					<div class="span-4-5">
 						<h3 class="major">请填写您的个人信息</h3>
 						<form method="post" action="{% url 'users:register_handle' %}">
-							<div class="field half">
+							{% csrf_token %}
+                            <div class="field half">
 								<label for="u_name">姓名</label>
 								<input type="text" name="u_name" id="u_name" placeholder="5-20个字符" />
 							</div>
@@ -36,11 +37,11 @@
 
 							<div class="field half">
 								<label for="u_pass">请输入密码</label>
-								<input type="text" name="u_pass" id="u_pass" placeholder="8-20个字符" />
+								<input type="password" name="u_pass" id="u_pass" placeholder="8-20个字符" />
 							</div>
 							<div class="field half">
 								<label for="u_repass">请再次输入密码</label>
-								<input type="text" name="u_repass" id="u_repass" placeholder="8-20个字符" />
+								<input type="password" name="u_repass" id="u_repass" placeholder="8-20个字符" />
 							</div>
 
 							<div class="field quarter">
